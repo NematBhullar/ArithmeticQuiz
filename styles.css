@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0529;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    line-height: 70px;
+    width: 70%;
+    height: 70px;
+    margin: 0.5rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #27467D;
+    color: white;
+    font-size: 20px;
+    font-family: 'Space Mono', 'monospace';
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.heading1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.windowDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px, 60vw, 700px);
+    height: clamp(300px, 60vh, 600px);
+    border-radius: 20px;
+    border: none;
+    background-color: #C8E1E9;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.1);
+}
+
+.windowDiv p {
+    font-family: 'Space Mono', 'monospace';
+}
+
+.timer {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    line-height: 94px;
+    margin-bottom: 2rem;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.question input {
+    width: 80px;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #27467D;
+    background-color: #C8E1E9;
+    font-family: 'Space Mono', 'monospace';
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.question input[disabled] {
+    background-color: #9DADBB;
+    border: none;
+}
+
+
+.accent-text {
+    color: #7CEADD;
+}
+
+.caption {
+    color: #27467D;
+    margin-bottom: 2rem;
+}
+
+.points-text {
+    display: flex;
+    width: 70%;
+    height: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #27467D;
+    border-radius: 10px;
+    color: #7CEADD;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-btn {
+    color: #27467D;
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
