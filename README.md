@@ -1,4 +1,5 @@
 # ArithmeticQuiz
+![Frame 4](https://github.com/NematBhullar/ArithmeticQuiz/assets/91060343/cf396d34-f1ac-4c84-8220-2312080f0315)
 
 1. About
 2. Getting Started
