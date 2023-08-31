@@ -1,22 +1,9 @@
-const TOTAL_TIME = 6;
+const TOTAL_TIME = 60;
 
 let ADD_OPTION = false;
 let TIMES_OPTION = false;
 let TIMER_ON = false;
 let points = 0;
-
-// Start Screen
-let optionsScreen = document.createElement("div");
-optionsScreen.classList.add("windowDiv");
-optionsScreen.append(optionsScreenText, addOptionBtn, timesOptionBtn);
-document.body.append(optionsScreen);
-
-let optionsScreenText = document.createElement("p");
-optionsScreenText.textContent = "Choose an option:";
-optionsScreenText.classList.add("heading1");
-
-let startTimerBtn = document.createElement("button");
-startTimerBtn.textContent = "Start Quiz";
 
 //// Addition Button 
 let addOptionBtn = document.createElement("button");
@@ -24,7 +11,7 @@ let addition = document.createElement("p");
 addition.textContent = "Addition";
 let plus = document.createElement("p");
 plus.textContent = "+";
-plus.classList.add("accent-text")
+plus.classList.add("button-symbol")
 addOptionBtn.append(addition, plus);
 
 //// Multiplication Button
@@ -33,8 +20,21 @@ let multiplication = document.createElement("p");
 multiplication.textContent = "Multiplication";
 let times = document.createElement("p");
 times.textContent = "×";
-times.classList.add("accent-text")
+times.classList.add("button-symbol");
 timesOptionBtn.append(multiplication, times);
+
+// Start Screen
+let optionsScreenText = document.createElement("p");
+optionsScreenText.textContent = "Choose an option:";
+optionsScreenText.classList.add("heading1");
+
+let startTimerBtn = document.createElement("button");
+startTimerBtn.textContent = "Start Quiz";
+
+let optionsScreen = document.createElement("div");
+optionsScreen.classList.add("windowDiv");
+optionsScreen.append(optionsScreenText, addOptionBtn, timesOptionBtn);
+document.body.append(optionsScreen);
 
 // Questions 
 let questionDiv = document.createElement("div");
@@ -45,6 +45,11 @@ let answer = document.createElement("input");
 let a;
 let b;
 let c;
+
+// Score 
+    // let score = document.createElement("p");
+    // score.classList.add("score-text");
+    // score.textContent = "Score: " + points;
 
 // Addition Window
 let addWindow = document.createElement("div");
@@ -167,9 +172,11 @@ let timerInterval;
 function getTimer(window) {
     let countdown = document.createElement("p");
     countdown.classList.add("timer");
+    
     let caption = document.createElement("p");
     caption.textContent = "seconds left";
-    caption.classList.add("caption")
+    caption.classList.add("timer-caption");
+    
     let timeLeft = TOTAL_TIME;
     countdown.textContent = timeLeft;
 
@@ -191,7 +198,7 @@ function getTimer(window) {
 // Once timer ends, the final score and the home button is displayed
 function endQuiz(window) {
     let scoreText = document.createElement("p");
-    scoreText.classList.add("points-text");
+    scoreText.classList.add("final-score-text");
     scoreText.textContent = points == 1 ? "You scored " + points + " point" : "You scored " + points + " points"
     let endBtn = document.createElement("p");
     endBtn.textContent = "Back to Home";

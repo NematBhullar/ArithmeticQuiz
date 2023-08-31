@@ -13,11 +13,16 @@ body {
     background-color: #0A0529;
 }
 
+.heading1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
 button {
     display: flex;
     flex-direction: row;
     line-height: 70px;
-    width: 70%;
+    width: clamp(300px, 70%, 70%);
     height: 70px;
     margin: 0.5rem;
     padding: 0 2rem;
@@ -31,9 +36,8 @@ button {
     transition: 0.5s;
 }
 
-.heading1 {
-    font-size: 25px;
-    font-weight: bold;
+.button-symbol {
+    color: #7CEADD;
 }
 
 .windowDiv {
@@ -41,8 +45,8 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: clamp(300px, 60vw, 700px);
-    height: clamp(300px, 60vh, 600px);
+    width: clamp(400px, 60vw, 700px);
+    height: clamp(400px, 60vh, 600px);
     border-radius: 20px;
     border: none;
     background-color: #C8E1E9;
@@ -68,7 +72,7 @@ button {
 }
 
 .question input {
-    width: 80px;
+    width: 120px;
     margin-left: 1rem;
     padding: 0.5rem;
     border-radius: 5px;
@@ -85,19 +89,20 @@ button {
     border: none;
 }
 
-
-.accent-text {
-    color: #7CEADD;
-}
-
-.caption {
+.timer-caption {
     color: #27467D;
     margin-bottom: 2rem;
 }
 
-.points-text {
+.score-text {
+    bottom: 1rem;
+    color: #27467D;
+    font-weight: bold;
+}
+
+.final-score-text {
     display: flex;
-    width: 70%;
+    width: clamp(400px, 70%, 70%);
     height: 70px;
     font-size: 30px;
     font-weight: bold;
